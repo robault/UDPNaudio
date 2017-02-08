@@ -16,7 +16,7 @@ namespace Server
         static string client = "192.168.1.139";
         static int port = 10100;
 
-        static WaveIn waveIn;
+        static WaveInEvent waveIn;
         static UdpClient udpSender;
         static INetworkChatCodec selectedCodec;
 
@@ -32,7 +32,7 @@ namespace Server
 
         static void Connect(IPEndPoint endPoint, int inputDeviceNumber, INetworkChatCodec codec)
         {
-            waveIn = new WaveIn();
+            waveIn = new WaveInEvent();
             waveIn.BufferMilliseconds = 50;
             //Microphone.DeviceNumber = inputDeviceNumber; // or just set default device in windows
             waveIn.WaveFormat = codec.RecordFormat;

@@ -12,7 +12,7 @@ namespace Client
 {
     class Program
     {
-        static string client = "192.168.1.139";
+        static string client = "192.168.1.121";
         static int port = 10100;
 
         static DirectSoundOut waveOut;
